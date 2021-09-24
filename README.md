@@ -28,3 +28,11 @@ Given a <ins>sorted array</ins>, search for a value $k$ in the array.
 3. Loop invariant: $A[begin] \leq key \leq A[end]$
 4. Invariant: $end-begin\le n/2^k$ in iteration $k$
 
+
+
+## Acknowledgements
+Portions of the codebase have been reused from the following sources:
+
+### Reused from [SE-EDU](https://github.com/se-edu/addressbook-level3/tree/master/config/checkstyle)
+1. `config\checkstyle\checkstyle.xml`
+2. `config\checkstyle\suppressions.xml`
