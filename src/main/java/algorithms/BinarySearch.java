@@ -1,3 +1,5 @@
+package algorithms;
+
 /**
  * Binary search takes in a sorted array and searches for a given key. Its runtime is O(log n) as it can halve
  * the problem size every iteration.

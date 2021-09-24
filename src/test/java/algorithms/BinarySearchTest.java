@@ -1,4 +1,7 @@
+package algorithms;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import algorithms.BinarySearch;
 import org.junit.jupiter.api.Test;
 
 public class BinarySearchTest {
