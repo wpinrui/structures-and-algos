@@ -1,4 +1,4 @@
-# Structures and Algorithms :triangular_ruler:
+# Data Structures and Algorithms :triangular_ruler:
 
 This repository is an archive of my practice implementations of various data structures and algorithms. It can be seen as an extension / revision of what I learnt in [CS2040S]([NUSMods](https://nusmods.com/modules/CS2040S/data-structures-and-algorithms)). 
 
@@ -31,6 +31,8 @@ Given a <ins>sorted array</ins>, search for a value $k$ in the array.
 
 
 ## Acknowledgements
+Most of the data structures, algorithms and notes here are what I learnt from CS2040S AY2020-21 Semester 2.
+
 Portions of the codebase have been reused from the following sources:
 
 ### Reused from [SE-EDU](https://github.com/se-edu/addressbook-level3/tree/master/config/checkstyle)
