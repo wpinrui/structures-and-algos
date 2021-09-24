@@ -29,6 +29,9 @@ Given a <ins>sorted array</ins>, search for a value `k` in the array.
 4. Invariant: `end-begin <= n/2^k` in iteration `k`
 
 
+## Problems
+1. [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)
+
 
 ## Acknowledgements
 Most of the data structures, algorithms and notes here are what I learnt from CS2040S AY2020-21 Semester 2.
