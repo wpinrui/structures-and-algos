@@ -14,26 +14,21 @@ public class CountNegativesSortedMatrix {
      * @return Number of negative numbers in the grid
      */
     public static int countNegatives(int[][] grid) {
-        int mid = grid.length / 2;
-
+        return 0;
     }
 
-    public static int countNegativesHelper(int[][] grid, int rs, int re, int cs, int ce) {
-        if (rs > re || ce < cs) {
-            return 0;
-        }
+    public static int findRowWithNegatives(int[][] grid) {
         if (grid.length == 1) {
-            return countRowNegativesTrivial(Arrays.copyOfRange(grid[0], cs, ce));
+            return countRowNegatives(grid[0]) == -1 ? -1 : 0;
         }
-        int result = 0;
-        // Binary search the middle row for a negative
-        int[] rowCol = findMiddleNegative(grid, rs, re, cs, ce);
-        // Increment the result based on the lower right rectangle
-        result = result + (re - rowCol[0] + 1) * (ce - rowCol[1] + 1);
-        // Recurse on the top right and lower left rectangles and return result
-        return result
-                + countNegativesHelper(grid, rs + rowCol[0] + 1, re, cs, ce + rowCol[1] + 1);
-                + countNegativesHelper(grid, rs, rowCol[0] - 1, )
+        int mid = grid.length / 2;
+        int numOfNegatives = countRowNegatives(grid[mid]);
+        if (numOfNegatives == 0) { // the first row with a negative must be further down
+            return mid + findRowWithNegatives(Arrays.copyOfRange(grid, mid + 1, grid.length));
+        } else { // we've already found
+            int attempt = findRowWithNegatives(Arrays.copyOfRange(grid, 0, mid + 1));
+            return attempt == -1 ? mid : attempt;
+        }
     }
 
     public static int countRowNegatives(int[] row) {
@@ -56,14 +51,6 @@ public class CountNegativesSortedMatrix {
             }
         }
         return count;
-    }
-
-    public static int[] findMiddleNegativeTrivial(int[][] grid) {
-
-    }
-
-    public static int[] findMiddleNegative(int[][] grid) {
-
     }
 }
 
